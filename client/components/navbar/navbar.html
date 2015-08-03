@@ -1,0 +1,49 @@
+<!-- Sidebar -->
+
+<!--header start here-->
+<div class="header-top">
+  <div class="container">
+    <div class="header-top-main">
+      <div class="logo">
+        <h1><a href="index.html">Connecta</a></h1>
+      </div>
+      <!-- <div class="header-icons">
+                <ul>
+                    <li><a href="#"><span class="fa"> </span></a></li>
+                    <li><a href="#"><span class="tw"> </span></a></li>
+                    <li><a href="#"><span class="g"> </span></a></li>
+                    <li><a href="#"><span class="p"> </span></a></li>
+                </ul>
+            </div> -->
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+  <div class="header" ng-controller="NavbarCtrl">
+    <div class="navbar-wrapper">
+      <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <!-- begin menu_item -->
+              <li ng-repeat="item in menu" class="" ng-class="{active: isActive(item.link)}">
+                <a ng-href="{{item.link}}">{{item.title}}</a>
+              </li>
+              <!-- end menu_item -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+<!--header end here-->

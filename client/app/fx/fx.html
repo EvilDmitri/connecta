@@ -1,0 +1,43 @@
+<div layout="column"  layout-align="space-around  start ">
+
+  <md-toolbar class="toolbar" ng-show="show.items" >
+    <div class="md-toolbar-tools">
+      <span>{{index+1}}-{{index+Items.length}} of {{Data.count}} albums</span>
+    </div>
+  </md-toolbar>
+
+
+  <div>
+    <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
+      Show Menu
+    </md-button>
+  </div>
+
+
+  <div layout="column" flex layout-fill>
+    <!-- begin albums container -->
+    <div class="grid" >
+       <!--begin albums -->
+      <div class="" ng-repeat="rate in rates">
+        <div class="column-{{ $index % 4 }}">
+          <div class="album">
+            <div class="album_name">{{rate.symbol}}</div>
+            <div class="name">{{rate.high}}</div>
+            <div class="name">{{rate.low}}</div>
+            <div class="name">{{rate.timeStamp | secondsToTime}}</div>
+            <div class="name">{{rate.timeStamp}}</div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
