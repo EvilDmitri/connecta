@@ -1,0 +1,7 @@
+
+<div ng-controller="MapCtrl">
+
+  <map center="58.876704, 25.109777" zoom="7">
+    <marker ng-repeat="pos in positions" position="{{pos.lat}}, {{pos.lng}}"></marker>
+  </map>
+</div>

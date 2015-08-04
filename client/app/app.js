@@ -8,7 +8,8 @@ angular.module('myBlogApp', [
   'ui.router',
   'ui.bootstrap',
   'ngAnimate',
-  'ngMaterial'
+  'ngMaterial',
+  'ngMap'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider

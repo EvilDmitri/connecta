@@ -5,7 +5,17 @@ angular.module('myBlogApp')
     $stateProvider
       .state('transport', {
         url: '/transport',
-        templateUrl: 'app/transport/transport.html',
-        controller: 'TransportCtrl'
+        data: {pageTitle: 'Transport'},
+        views: {
+          'main': {
+            templateUrl: 'app/transport/transport.html',
+            controller: 'TransportCtrl'
+          }
+          //,
+          //'content@transport': {
+          //  templateUrl: 'app/transport/transport.html',
+          //  controller: 'FXCtrl'
+          //}
+        }
       });
   });
