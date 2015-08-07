@@ -11,7 +11,7 @@ angular.module('myBlogApp')
         views: {
           'main': {
             templateUrl: 'app/main/main.html',
-            controller: 'FXCtrl'
+            controller: 'MainCtrl'
           },
           'content@fx': {
             templateUrl: 'app/fx/fx.html'

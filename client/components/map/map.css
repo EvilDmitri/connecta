@@ -1,6 +1,6 @@
 map
 {
-  height: 600px;
+  height: 400px;
   width: 100%;
   left: 50%;
 }
@@ -10,7 +10,7 @@ div[ng-controller='MapCtrl'] {
 }
 div[ng-controller='MapCtrl'] #panel {
   position: absolute;
-  top: 40px;
+  top: 10px;
   left: 50%;
   margin-left: -180px;
   z-index: 5;

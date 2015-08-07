@@ -84,11 +84,9 @@ angular.module('myBlogApp')
       //socket to receive data from fx_module
       syncInfo: function (cb) {
         cb = cb || angular.noop;
-        socket.on('fxPriceUpdate', function (item) {
+        socket.on('thing', function (item) {
           cb(event, item);
         });
-
-
       }
 
     };

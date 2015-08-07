@@ -9,7 +9,8 @@ angular.module('myBlogApp', [
   'ui.bootstrap',
   'ngAnimate',
   'ngMaterial',
-  'ngMap'
+  'ngMap',
+  'google.places'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
