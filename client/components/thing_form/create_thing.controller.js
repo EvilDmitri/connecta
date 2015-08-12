@@ -12,7 +12,7 @@ angular.module('myBlogApp')
       address:null
     };
 
-    $scope.addThing = function() {
+    $scope.createThing = function() {
       console.log($scope.thing.address.geometry.location.lat(), $scope.thing.address.geometry.location.lng());
       console.log($scope.thing);
       $scope.thing.position = {
@@ -26,7 +26,7 @@ angular.module('myBlogApp')
 
 
     var addThing = function() {
-      if($scope.newThing === '') {
+      if($scope.thing === '') {
         return;
       }
       $http.post('/api/things', {
@@ -38,4 +38,20 @@ angular.module('myBlogApp')
       $scope.thing = '';
     };
 
-  });
+  })
+
+  .config(['flowFactoryProvider', function (flowFactoryProvider) {
+    flowFactoryProvider.defaults = {
+      target: 'api/images',
+      permanentErrors: [404, 500, 501],
+      maxChunkRetries: 1,
+      chunkRetryInterval: 5000,
+      simultaneousUploads: 4,
+      singleFile: true
+    };
+    flowFactoryProvider.on('catchAll', function (event) {
+      console.log('catchAll', arguments);
+    });
+    // Can be used with different implementations of Flow.js
+    // flowFactoryProvider.factory = fustyFlowFactory;
+  }]);

@@ -10,9 +10,13 @@ var express = require('express');
 module.exports = function(app) {
 
   // Insert routes below
+  app.use('/api/images', require('./api/image'));
   app.use('/api/things', require('./api/thing'));
   app.use('/api/fx', require('./api/fx'));
   app.use('/api/users', require('./api/user'));
+
+  //var multer  = require('multer')();
+  //app.use('/api/images', multer({ dest: './uploads/'}));
 
   app.use('/static', express.static(__dirname + '/static'));
 

@@ -4,8 +4,17 @@ angular.module('myBlogApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('all', {
-        url: '/all',
-        templateUrl: 'app/all/all.html',
-        controller: 'AllCtrl'
+        url: '/',
+        data: {pageTitle: 'Main'},
+        views: {
+          'main': {
+            templateUrl: 'app/main/main.html',
+            controller: 'MainCtrl'
+          },
+          'content@all': {
+            templateUrl: 'app/all/all.html',
+            controller: 'AllCtrl'
+          }
+        }
       });
   });

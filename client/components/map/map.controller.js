@@ -44,8 +44,10 @@ angular.module('myBlogApp')
 
       }
 
-      socket.syncUpdates('thing', $scope.Things);
+
     });
+
+    socket.syncUpdates('thing', $scope.Things);
 
     //$scope.addThing = function() {
     //  if($scope.newThing === '') {

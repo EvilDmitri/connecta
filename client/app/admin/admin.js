@@ -5,7 +5,17 @@ angular.module('myBlogApp')
     $stateProvider
       .state('admin', {
         url: '/admin',
-        templateUrl: 'app/admin/admin.html',
-        controller: 'AdminCtrl'
+        data: {pageTitle: 'Admin page'},
+        views: {
+          'main': {
+            templateUrl: 'app/admin/admin.html',
+            controller: 'AdminCtrl'
+          }
+          //,
+          //'content@transport': {
+          //  templateUrl: 'app/transport/transport.html',
+          //  controller: 'FXCtrl'
+          //}
+        }
       });
   });

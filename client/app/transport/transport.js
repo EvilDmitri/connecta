@@ -8,14 +8,14 @@ angular.module('myBlogApp')
         data: {pageTitle: 'Transport'},
         views: {
           'main': {
+            templateUrl: 'app/main/main.html',
+            controller: 'MainCtrl'
+          }
+          ,
+          'content@transport': {
             templateUrl: 'app/transport/transport.html',
             controller: 'TransportCtrl'
           }
-          //,
-          //'content@transport': {
-          //  templateUrl: 'app/transport/transport.html',
-          //  controller: 'FXCtrl'
-          //}
         }
       });
   });

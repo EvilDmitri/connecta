@@ -5,18 +5,49 @@ angular.module('myBlogApp')
     $stateProvider
       .state('login', {
         url: '/login',
-        templateUrl: 'app/account/login/login.html',
-        controller: 'LoginCtrl'
+        data: {pageTitle: 'Login'},
+        views: {
+          'main': {
+            templateUrl: 'app/account/login/login.html',
+            controller: 'LoginCtrl'
+          }
+          //,
+          //'content@transport': {
+          //  templateUrl: 'app/transport/transport.html',
+          //  controller: 'FXCtrl'
+          //}
+        }
       })
       .state('signup', {
         url: '/signup',
-        templateUrl: 'app/account/signup/signup.html',
-        controller: 'SignupCtrl'
+        data: {pageTitle: 'Sign up'},
+        views: {
+          'main': {
+            templateUrl: 'app/account/signup/signup.html',
+            controller: 'SignupCtrl'
+          }
+          //,
+          //'content@transport': {
+          //  templateUrl: 'app/transport/transport.html',
+          //  controller: 'FXCtrl'
+          //}
+        }
       })
       .state('settings', {
         url: '/settings',
-        templateUrl: 'app/account/settings/settings.html',
-        controller: 'SettingsCtrl',
+        data: {pageTitle: 'Transport'},
+        views: {
+          'main': {
+            templateUrl: 'app/account/settings/settings.html',
+            controller: 'SettingsCtrl'
+          }
+          //,
+          //'content@transport': {
+          //  templateUrl: 'app/transport/transport.html',
+          //  controller: 'FXCtrl'
+          //}
+
+        },
         authenticate: true
       });
   });

@@ -36,7 +36,7 @@ angular.module('myBlogApp')
       {
         'title': 'Registeeru',
         'description': ['Register'],
-        'link': '/fx'
+        'link': '/signup'
       }
     ];
 

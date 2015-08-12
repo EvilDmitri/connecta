@@ -8,14 +8,14 @@ angular.module('myBlogApp')
         data: {pageTitle: 'Ehitus'},
         views: {
           'main': {
+            templateUrl: 'app/main/main.html',
+            controller: 'MainCtrl'
+          }
+          ,
+          'content@ehitus': {
             templateUrl: 'app/ehitus/ehitus.html',
             controller: 'EhitusCtrl'
           }
-          //,
-          //'content@transport': {
-          //  templateUrl: 'app/transport/transport.html',
-          //  controller: 'FXCtrl'
-          //}
         }
       });
   });
